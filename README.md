@@ -5,12 +5,7 @@
 <p align="center">
   🚗 A Parking Lot Management API built with <a href="http://nestjs.com" target="_blank">NestJS</a>.
 </p>
-<p align="center">
-<a href="https://github.com/your-username/parking-lot-api/actions" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/your-username/parking-lot-api/ci.yml?branch=main" alt="CI Build" /></a>
-<a href="https://www.npmjs.com/package/nest" target="_blank"><img src="https://img.shields.io/badge/NestJS-v11-red" alt="NestJS Version" /></a>
-<a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License" /></a>
-<a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow NestJS" /></a>
-</p>
+
 
 ---
 
@@ -33,9 +28,7 @@ Supports:
 ```bash
 $ npm install
 🏃 Compile & Run
-bash
-Copy
-Edit
+
 # development
 $ npm run start
 
@@ -45,18 +38,14 @@ $ npm run start:dev
 # production
 $ npm run start:prod
 🧪 Run Tests
-bash
-Copy
-Edit
+
 # unit tests
 $ npm run test
 
 # coverage
 $ npm run test:cov
 🐳 Run with Docker
-bash
-Copy
-Edit
+
 # build and run
 $ docker-compose up --build
 
@@ -81,9 +70,7 @@ GET /slot_numbers/:color → Get slot numbers by color
 GET /slot_number/:registrationNo → Get slot by registration number
 
 📂 Project Structure
-java
-Copy
-Edit
+
 src/
  └── parking/
      ├── parking.controller.ts
