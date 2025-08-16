@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Parking Lot API",
+    "_postman_id": "d1d6f040-1a9e-4e67-8c7f-123456789abc",
+    "description": "Collection to test Parking Lot NestJS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Initialize Parking Lot",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"no_of_slot\": 6\n}"
+        },
+        "url": { "raw": "http://localhost:3000/parking_lot", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["parking_lot"] }
+      }
+    },
+    {
+      "name": "Expand Parking Lot",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"increment_slot\": 3\n}"
+        },
+        "url": { "raw": "http://localhost:3000/parking_lot", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["parking_lot"] }
+      }
+    },
+    {
+      "name": "Park a Car",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"car_reg_no\": \"KA-01-AB-2211\",\n  \"car_color\": \"white\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/park", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["park"] }
+      }
+    },
+    {
+      "name": "Get Status",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/status", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["status"] }
+      }
+    },
+    {
+      "name": "Get Registration Numbers by Color",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/registration_numbers/white", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["registration_numbers", "white"] }
+      }
+    },
+    {
+      "name": "Get Slot Numbers by Color",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/slot_numbers/white", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["slot_numbers", "white"] }
+      }
+    },
+    {
+      "name": "Get Slot by Registration",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/slot_number/KA-01-AB-2211", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["slot_number", "KA-01-AB-2211"] }
+      }
+    },
+    {
+      "name": "Clear Slot by Number",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"slot_number\": 1\n}"
+        },
+        "url": { "raw": "http://localhost:3000/clear", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["clear"] }
+      }
+    },
+    {
+      "name": "Clear Slot by Registration",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"car_registration_no\": \"KA-01-AB-2211\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/clear", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["clear"] }
+      }
+    }
+  ]
+}
